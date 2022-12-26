@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+*{
+    box-sizing: border-box;
+    
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(255,91,251);
+    background: linear-gradient(90deg, rgba(255,91,251,1) 0%, rgba(164,8,194,1) 0%, rgba(23,176,185,1) 100%);
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.grid-container{
+    display: grid;
+    justify-content: center;
+    margin-top: 2rem;
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: minmax(7rem, auto) repeat(5, 6rem); /* se pone auto para que la primer fila si es un numero muy grande se cree otra linea */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button{
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+    
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.rounded-right{
+    border-bottom-right-radius: 1rem;
+}
+.rounded-left{
+    border-bottom-left-radius: 1rem;
+
 }
 
-.App-link {
-  color: #61dafb;
+.grid-container > button:hover, .grid-container > button:focus{
+    background-color: rgba(255, 255, 255, .5);
+
+
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.two-columns{
+    grid-column: span 2;
+}
+
+.output{
+    grid-column: 1 / -1; /* para que tome la fila entera */
+    display: flex;
+    background-color: rgba(0, 0, 0, .75);
+    color: rgba(255, 255, 255, .75);
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 0.75rem;
+    word-wrap: break-word;
+    word-break: break-all; /* permite cortar el numero y que siga en la linea de abajo */
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+
+
+}
+
+.output__history{
+    font-size: 1rem;
+
+}
+
+.output__current{
+    font-size: 2rem;
+
 }
