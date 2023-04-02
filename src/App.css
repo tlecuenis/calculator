@@ -27,6 +27,10 @@ button{
     
 }
 
+.disabled{
+    cursor: not-allowed;
+}
+
 .rounded-right{
     border-bottom-right-radius: 1rem;
 }
@@ -51,9 +55,8 @@ button{
     display: flex;
     background-color: rgba(0, 0, 0, .75);
     color: rgba(255, 255, 255, .75);
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: flex-end;
     padding: 0.75rem;
     word-wrap: break-word;
     word-break: break-all; /* permite cortar el numero y que siga en la linea de abajo */
@@ -63,12 +66,7 @@ button{
 
 }
 
-.output__history{
-    font-size: 1rem;
-
-}
-
 .output__current{
-    font-size: 2rem;
+    font-size: 2.2rem;
 
 }
